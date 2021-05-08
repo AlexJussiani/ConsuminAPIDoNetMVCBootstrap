@@ -31,32 +31,33 @@ namespace ConsuminAPIDoNetMVCBootstrap.Controllers
 
          public IActionResult MegaSena()
         {
-            //  DataResponse teste = new ServiceDataResponse().GetDataResponse("https://lotericas.io/api/v1/jogos/megasena/lasted");           
-            //  Console.WriteLine("teste");
-            //  Console.WriteLine(teste.Data[0].NumeroJogo);
-            //  Console.WriteLine(teste.Data[0].Observacao);
-            //  Console.WriteLine(teste.Data[0].TipoPublicacao);
-            //  Console.WriteLine(teste.Data[0].ValorAcumuladoConcursoEspecial);
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/megasena/lasted");         
             return View();
         }
         public IActionResult Diadesorte()
         {
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/diadesorte/lasted");
+            Console.WriteLine(teste.Data[0].NomeMunicipioUFSorteio);
             return View();
         }
         public IActionResult Duplasena()
         {
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/duplasena/lasted");
             return View();
         }
         public IActionResult Federal()
         {
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/federal/lasted");
             return View();
         }
         public IActionResult Loteca()
         {
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/loteca/lasted");
             return View();
         }
         public IActionResult LotoFacil()
         {
+            DataResponse teste = new ServiceLoterica().GetDataResponse("https://lotericas.io/api/v1/jogos/lotofacil/lasted");
             return View();
         }
 
